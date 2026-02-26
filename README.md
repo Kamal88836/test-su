@@ -1,5 +1,13 @@
 # test-su
 
+
+TASK [ilo_boot_up : Reboot] **********************************************************************************************************************
+fatal: [ilo1]: FAILED! => {"cache_control": "no-cache", "changed": false, "content": "{\"error\":{\"code\":\"iLO.0.10.ExtendedInfo\",\"message\":\"See @Message.ExtendedInfo for more information.\",\"@Message.ExtendedInfo\":[{\"MessageId\":\"Base.1.18.NoValidSession\"}]}}", "content_type": "application/json; charset=utf-8", "date": "Sun, 07 Jan 2001 03:29:56 GMT", "elapsed": 0, "etag": "W/\"02C2D1BB\"", "json": {"error": {"@Message.ExtendedInfo": [{"MessageId": "Base.1.18.NoValidSession"}], "code": "iLO.0.10.ExtendedInfo", "message": "See @Message.ExtendedInfo for more information."}}, "msg": "Status code was 401 and not [200]: HTTP Error 401: Unauthorized", "odata_version": "4.0", "redirected": false, "status": 401, "transfer_encoding": "chunked", "url": "https://192.168.250.55/redfish/v1/Systems/1/Actions/ComputerSystem.Reset", "x_content_type_options": "nosniff", "x_frame_options": "sameorigin", "x_xss_protection": "1; mode=block"}
+
+PLAY RECAP ***************************************************************
+
+
+
 TASK [ilo_boot_up : Set one-time boot from CD] ***************************************************************************************************
 fatal: [ilo1]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "cache_control": "no-cache", "changed": false, "connection": "close", "content": "{\"error\":{\"code\":\"iLO.0.10.ExtendedInfo\",\"message\":\"See @Message.ExtendedInfo for more information.\",\"@Message.ExtendedInfo\":[{\"MessageArgs\":[\"BootSourceOverrideTarget\"],\"MessageId\":\"iLO.2.25.UnableToModifyDuringSystemPOST\"}]}}", "content_type": "application/json; charset=utf-8", "date": "Sun, 07 Jan 2001 01:50:47 GMT", "elapsed": 0, "etag": "W/\"BB09A2E0\"", "json": {"error": {"@Message.ExtendedInfo": [{"MessageArgs": ["BootSourceOverrideTarget"], "MessageId": "iLO.2.25.UnableToModifyDuringSystemPOST"}], "code": "iLO.0.10.ExtendedInfo", "message": "See @Message.ExtendedInfo for more information."}}, "msg": "Status code was 400 and not [200]: HTTP Error 400: Bad Request", "odata_version": "4.0", "redirected": false, "status": 400, "transfer_encoding": "chunked", "url": "https://192.168.250.55/redfish/v1/Systems/1", "x_content_type_options": "nosniff", "x_frame_options": "sameorigin", "x_xss_protection": "1; mode=block"}
 
